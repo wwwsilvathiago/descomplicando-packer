@@ -10,7 +10,7 @@
     "builders": [
       {
          "type": "amazon-ebs",
-         "region": "{{user 'region'}}",
+         "region": "{{user ´region´}}",
          "source_ami_filter": {
              "filters": {
                  "virtualization-type": "hvm",
@@ -22,13 +22,13 @@
           },
          "instance_type": "t2.micro",
          "ssh_username": "ubuntu",
-         "ami_name": "{{user 'name'}} {{user 'type'}} {{timestamp}}",
+         "ami_name": "{{user ´name´}} {{user ´type´}} {{timestamp}}",
          "ami_description": "from {{.SourceAMI}}",
          "tags": {
              "OS_Version": "Ubuntu",
              "Release": "Latest",
              "Base_AMI_Name": "{{ .SourceAMIName }}",
-             "Extra": "{{ .SourceAMITags}}"
+             "Extra": "{{ .SourceAMITags.TagName }}"
          }
       }
     ],
