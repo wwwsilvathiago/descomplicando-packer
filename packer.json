@@ -32,7 +32,6 @@
           "Extra": "{{ .SourceAMITags.TagName }}"
         },
         "communicator": "ssh",
-        "ssh_username": "ubuntu",
         "pause_before_connecting": "5m"                 
       }
     ],
