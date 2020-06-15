@@ -30,7 +30,10 @@
           "Release": "Latest",
           "Base_AMI_Name": "{{ .SourceAMIName }}",
           "Extra": "{{ .SourceAMITags.TagName }}"
-        }
+        },
+        "communicator": "ssh",
+        "ssh_username": "ubuntu",
+        "pause_before_connecting": "5m"                 
       }
     ],
     "provisioners": [
