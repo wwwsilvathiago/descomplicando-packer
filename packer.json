@@ -54,7 +54,7 @@
       },
       {
         "type": "shell",
-        "inline":[
+        "inline": [
             "sudo apt-get update",
             "sudo apt-get install python3-pip -y",
             "sudo pip3 install --upgrade pip pytest testinfra importlib",
